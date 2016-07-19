@@ -1,0 +1,114 @@
+/**
+ * FADE
+ */
+@keyframes fade {
+	from { opacity: 1.0; }
+	50% { opacity: 0.4; }
+	to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+	from { opacity: 1.0; }
+	50% { opacity: 0.4; }
+	to { opacity: 1.0; }
+}
+
+
+/**
+ * FADE OUT
+ */
+@keyframes fadeOut {
+	from { opacity: 1 ; }
+	to { opacity: 0 ; }
+}
+ 
+@-webkit-keyframes fadeOut {
+	from { opacity: 1 ; }
+	to { opacity: 0 ; }
+}
+
+
+
+
+/**
+ * SLIDE
+ */
+.slide {
+	@include transition( transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) );
+
+	// SALIR
+	&.out {
+		// IZQUIERDA
+		&.left {
+			animation:slideOutL 1500ms ease-in-out ;
+			-webkit-animation:slideOutL 1500ms ease-in-out ;
+			left : -100% ;
+		}
+
+		// ARRIBA
+		&.up {
+			// animation : slideOutUp 2500ms ease-in-out ;
+			// -webkit-animation : slideOutUp 1500ms ease-in-out ;
+			// top : -100% ;
+			@include transform( translate( 0 , -100% ) )
+		}
+	}
+
+	// ENTRAR
+	&.in {
+		// IZQUIERDA
+		&.left {
+			animation:slideInL 700ms ease-out ;
+			-webkit-animation:slideInL 700ms ease-out ;
+			left : 0 ;
+		}
+
+		// ARRIBA
+		&.up {
+			// animation : slideInUp 700ms ease-out ;
+			// -webkit-animation : slideInUp 700ms ease-out ;
+			// top : 0 ;
+			@include transform( translate( 0 , 0 ) )
+		}
+	}
+}
+
+@keyframes slideOutL {
+	from { opacity: 1 ; left : 0 }
+	to { opacity: 0 ; left : -100% }
+}
+ 
+@-webkit-keyframes slideOutL {
+	from { opacity: 1 ; left : 0 }
+	to { opacity: 0 ; left : -100% }
+}
+
+@keyframes slideInL {
+	from { opacity: 0 ; left : -100% }
+	to { opacity: 1 ; left : 0 }
+}
+
+@-webkit-keyframes slideInL {
+	from { opacity: 0 ; left : -100% }
+	to { opacity: 1 ; left : 0 }
+}
+
+@keyframes slideOutUp {
+	from { opacity : 1 ; top : 0 }
+	to { opacity: 0 ; top : -100% }
+}
+
+@-webkit-keyframes slideOutUp {
+	from { opacity : 1 ; top : 0 }
+	to { opacity: 0 ; top : -100% }
+}
+
+@keyframes slideInUp {
+	from { opacity: 0 ; top : -100% }
+	to { opacity : 1 ; top : 0 }
+}
+
+@-webkit-keyframes slideInUp {
+	from { opacity: 0 ; top : -100% }
+	to { opacity : 1 ; top : 0 }
+}

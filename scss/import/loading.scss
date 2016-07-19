@@ -1,0 +1,72 @@
+/**
+ * LOADING
+ */
+#loading {
+	-moz-user-select : none ;
+	-webkit-align-items : center ;
+	-webkit-justify-content : center ;
+	-webkit-user-select : none ;
+	align-items : center ;
+	background-color : rgba( 0 , 0 , 0 , .75 ) ;
+	display : flex ;
+	display : -webkit-box ;
+	display : -webkit-flex ;
+	height : 100vh ;
+	justify-content : center ;
+	position : fixed ;
+	width : 100vw ;
+	z-index : 3100 ;
+	
+	.spinner-container {
+		-webkit-animation: rotate 2s linear infinite;
+		animation: rotate 2s linear infinite;
+		z-index: 2;
+		
+		.path {
+			stroke-dasharray: 1,150; /* 1%, 101% circumference */
+			stroke-dashoffset: 0;
+			// stroke: rgba(27, 154, 89, 0.7);
+			stroke : $main-color1 ;
+			stroke-linecap: round;
+			-webkit-animation: dash 1.5s ease-in-out infinite;
+			animation: dash 1.5s ease-in-out infinite;
+		}
+	}
+}
+
+
+@keyframes rotate {
+	100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate{
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes dash {
+	0% {
+		stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 90,150; /* 70%, 101% circumference */
+		stroke-dashoffset: -35;   /* 25% circumference */
+	}
+	100% {
+		stroke-dasharray: 90,150; /* 70%, 101% circumference */
+		stroke-dashoffset: -124;  /* -99% circumference */
+	}
+}
+@-webkit-keyframes dash {
+	0% {
+		stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 90,150; /* 70%, 101% circumference */
+		stroke-dashoffset: -35;   /* 25% circumference */
+	}
+	100% {
+		stroke-dasharray: 90,150; /* 70%, 101% circumference */
+		stroke-dashoffset: -124;  /* -99% circumference */
+	}
+}

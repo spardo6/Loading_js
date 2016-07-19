@@ -1,0 +1,182 @@
+/**
+ * FADE
+ */
+@keyframes fade {
+  from {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.4; }
+  to {
+    opacity: 1.0; } }
+@-webkit-keyframes fade {
+  from {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.4; }
+  to {
+    opacity: 1.0; } }
+/**
+ * FADE OUT
+ */
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+/**
+ * SLIDE
+ */
+.slide {
+  -moz-transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  -o-transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  -webkit-transition: -webkit- transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  -webkit-transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: -webkit- transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98); }
+  .slide.out.left {
+    animation: slideOutL 1500ms ease-in-out;
+    -webkit-animation: slideOutL 1500ms ease-in-out;
+    left: -100%; }
+  .slide.out.up {
+    -ms-transform: translate(0, -100%);
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%); }
+  .slide.in.left {
+    animation: slideInL 700ms ease-out;
+    -webkit-animation: slideInL 700ms ease-out;
+    left: 0; }
+  .slide.in.up {
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+@keyframes slideOutL {
+  from {
+    opacity: 1;
+    left: 0; }
+  to {
+    opacity: 0;
+    left: -100%; } }
+@-webkit-keyframes slideOutL {
+  from {
+    opacity: 1;
+    left: 0; }
+  to {
+    opacity: 0;
+    left: -100%; } }
+@keyframes slideInL {
+  from {
+    opacity: 0;
+    left: -100%; }
+  to {
+    opacity: 1;
+    left: 0; } }
+@-webkit-keyframes slideInL {
+  from {
+    opacity: 0;
+    left: -100%; }
+  to {
+    opacity: 1;
+    left: 0; } }
+@keyframes slideOutUp {
+  from {
+    opacity: 1;
+    top: 0; }
+  to {
+    opacity: 0;
+    top: -100%; } }
+@-webkit-keyframes slideOutUp {
+  from {
+    opacity: 1;
+    top: 0; }
+  to {
+    opacity: 0;
+    top: -100%; } }
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    top: -100%; }
+  to {
+    opacity: 1;
+    top: 0; } }
+@-webkit-keyframes slideInUp {
+  from {
+    opacity: 0;
+    top: -100%; }
+  to {
+    opacity: 1;
+    top: 0; } }
+/**
+ * LOADING
+ */
+#loading {
+  -moz-user-select: none;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-user-select: none;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 3100; }
+  #loading .spinner-container {
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
+    z-index: 2; }
+    #loading .spinner-container .path {
+      stroke-dasharray: 1,150;
+      /* 1%, 101% circumference */
+      stroke-dashoffset: 0;
+      stroke: #f9a11b;
+      stroke-linecap: round;
+      -webkit-animation: dash 1.5s ease-in-out infinite;
+      animation: dash 1.5s ease-in-out infinite; }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,150;
+    /* 1%, 101% circumference */
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 90,150;
+    /* 70%, 101% circumference */
+    stroke-dashoffset: -35;
+    /* 25% circumference */ }
+  100% {
+    stroke-dasharray: 90,150;
+    /* 70%, 101% circumference */
+    stroke-dashoffset: -124;
+    /* -99% circumference */ } }
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1,150;
+    /* 1%, 101% circumference */
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 90,150;
+    /* 70%, 101% circumference */
+    stroke-dashoffset: -35;
+    /* 25% circumference */ }
+  100% {
+    stroke-dasharray: 90,150;
+    /* 70%, 101% circumference */
+    stroke-dashoffset: -124;
+    /* -99% circumference */ } }
+
+/*# sourceMappingURL=loading.css.map */

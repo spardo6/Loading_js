@@ -1,0 +1,83 @@
+// Align items
+@mixin align-items ( $value ) {
+	-webkit-align-items: $value ;
+	align-items: $value ;
+}
+
+
+// Box sizing
+@mixin box-sizing ( $value ) {
+	-webkit-box-sizing : $value ;
+	-moz-box-sizing : $value ;
+	box-sizing : $value ;
+}
+
+
+@mixin box-shadow ( $value ) {
+    -webkit-box-shadow : $value ;
+    -moz-box-shadow : $value ;
+    box-shadow : $value ;
+}
+
+
+// Display flex
+@mixin display-flex {
+	display : -webkit-flex ;
+	display : -webkit-box ;
+	display : flex ;
+}
+
+
+// Flex direction
+@mixin flex-direction ( $value ) {
+	-webkit-flex-direction : $value ;
+	flex-direction : $value ;
+}
+
+
+// Gradient
+@mixin linear-gradient ( $from , $to ) {
+	background: $from ;
+    background: -webkit-linear-gradient( $from , $to );
+    background: -o-linear-gradient( $from , $to );
+    background: -moz-linear-gradient( $from , $to );
+    background: linear-gradient( $from , $to );
+}
+
+
+// Justify content
+@mixin justify-content ( $value ) {
+	-webkit-justify-content : $value ;
+	justify-content : $value ;
+}
+
+// Transform
+@mixin transform ( $value ) {
+	-ms-transform : $value ;
+    -webkit-transform : $value ;
+    transform : $value ;
+}
+
+// Transition
+@mixin transition ( $value ) {
+	-moz-transition : $value ;
+	-o-transition : $value ;
+	-webkit-transition : -webkit-$value ;
+	-webkit-transition : $value ;
+	transition : -webkit-$value ;
+	transition : $value ;
+}
+
+// Transition delay
+@mixin transition-delay ( $value ) {
+	-webkit-transition-delay : $value ;
+	transition-delay : $value ;
+}
+
+// User select
+@mixin user-select ( $value ) {
+	-moz-user-select : -moz-$value ;
+	-ms-user-select : $value ;
+	-webkit-user-select : $value ;
+	user-select : $value ;
+}

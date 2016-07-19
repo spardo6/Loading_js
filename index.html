@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cargando...</title>
+
+		<link rel="stylesheet" href="./css/vendor/normalize.css">
+		<link rel="stylesheet" href="./css/loading.css">
+	</head>
+	<body>
+		<!-- LAYER: Loading -->
+		<section id="loading" class="slide up">
+			<svg class="spinner-container" width="40px" height="40px" viewBox="0 0 52 52">
+				<circle class="path" cx="26px" cy="26px" r="20px" fill="none" stroke-width="4px"></circle>
+			</svg>
+		</section>
+
+		<button id="start">Iniciar</button>
+
+		<script src="./js/vendor/jquery-2.2.2.min.js"></script>
+		<script src="./js/loading.js"></script>
+
+		<script>
+			$( document ).ready( function () {
+				$( '#start' ).on( 'click' , function () {
+					Loading.show();
+
+					setTimeout( function () {
+						Loading.hide();
+					} , 2000 );
+				} );
+
+				Loading.hide();
+			} );
+		</script>
+	</body>
+</html>
